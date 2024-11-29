@@ -7,12 +7,23 @@ const historico = [];
 document.getElementById('time1').addEventListener('input', (e) => {
   nomeTime1 = e.target.value || 'Time 1';
   document.getElementById('nomeTime1').textContent = nomeTime1;
+  toggleNomeVisivel();
 });
 
 document.getElementById('time2').addEventListener('input', (e) => {
   nomeTime2 = e.target.value || 'Time 2';
   document.getElementById('nomeTime2').textContent = nomeTime2;
+  toggleNomeVisivel();
 });
+
+function toggleNomeVisivel() {
+  const nomeConfig = document.querySelector('.config');
+  if (nomeTime1 && nomeTime2) {
+    nomeConfig.style.display = 'none'; // Oculta a configuração de nomes quando os dois estiverem preenchidos
+  } else {
+    nomeConfig.style.display = 'flex'; // Exibe a configuração de nomes se não estiverem preenchidos
+  }
+}
 
 function adicionarPonto(time) {
   if (time === 1) {
