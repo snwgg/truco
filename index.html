@@ -1,17 +1,59 @@
-<!-- Contador de pontos -->
-<div class="contador">
-  <div id="time1Pontos" class="time">
-    <h2 id="nomeTime1">Time 1</h2>
-    <div id="pontosTime1">0</div>
-    <button class="button pontos" onclick="adicionarPonto(1)">+1</button>
-    <button class="button pontos" onclick="removerPonto(1)">-1</button> <!-- Novo botão -1 -->
-    <button class="button truco" onclick="adicionarTruco(1)">TRUCO!</button>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truco Big Big</title>
+  <!-- Carregar a fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="titulo">TRUCO BIG BIG</h1>
+    
+    <!-- Configuração dos nomes dos times -->
+    <div class="config" id="configNomes">
+      <label for="time1">Nome do Time 1:</label>
+      <input type="text" id="time1" placeholder="Nome do time 1">
+      <label for="time2">Nome do Time 2:</label>
+      <input type="text" id="time2" placeholder="Nome do time 2">
+      <button id="confirmar" class="button" onclick="confirmarNomes()">Confirmar</button>
+    </div>
+
+    <!-- Contador de pontos -->
+    <div class="contador">
+      <div id="time1Pontos" class="time">
+        <h2 id="nomeTime1">Time 1</h2>
+        <div id="pontosTime1">0</div>
+        <button class="button pontos" onclick="adicionarPonto(1)">+1</button>
+        <button class="button pontos" onclick="removerPonto(1)">-1</button> <!-- Novo botão -1 -->
+        <button class="button truco" onclick="adicionarTruco(1)">TRUCO!</button>
+      </div>
+      <div id="time2Pontos" class="time">
+        <h2 id="nomeTime2">Time 2</h2>
+        <div id="pontosTime2">0</div>
+        <button class="button pontos" onclick="adicionarPonto(2)">+1</button>
+        <button class="button pontos" onclick="removerPonto(2)">-1</button> <!-- Novo botão -1 -->
+        <button class="button truco" onclick="adicionarTruco(2)">TRUCO!</button>
+      </div>
+    </div>
+
+    <!-- Mensagem de vitória -->
+    <div id="mensagem" class="mensagem"></div>
+
+    <!-- Histórico -->
+    <div class="historico">
+      <h3>Histórico</h3>
+      <ul id="historicoList"></ul>
+    </div>
+
   </div>
-  <div id="time2Pontos" class="time">
-    <h2 id="nomeTime2">Time 2</h2>
-    <div id="pontosTime2">0</div>
-    <button class="button pontos" onclick="adicionarPonto(2)">+1</button>
-    <button class="button pontos" onclick="removerPonto(2)">-1</button> <!-- Novo botão -1 -->
-    <button class="button truco" onclick="adicionarTruco(2)">TRUCO!</button>
-  </div>
-</div>
+
+  <footer>
+    <p>ETERNO TRUCO BIG BIG</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
