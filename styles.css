@@ -54,6 +54,28 @@ body {
   background-color: #FF9900;
 }
 
+/* Estilo dos botões +1 e TRUCO */
+.pontos, .truco {
+  background-color: #800080; /* Cor roxa */
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.pontos:hover, .truco:hover {
+  background-color: #660066; /* Cor roxa escura para o efeito hover */
+  transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse */
+}
+
+.pontos:active, .truco:active {
+  background-color: #FFCC00; /* Cor amarela ao clicar */
+  transform: scale(0.95); /* Efeito de clique (botão encolhe ligeiramente) */
+}
+
 .contador {
   display: flex;
   justify-content: space-around;
@@ -73,26 +95,6 @@ body {
   background-color: #333;
   padding: 20px;
   border-radius: 10px;
-}
-
-.pontos {
-  background-color: #28a745;
-  color: white;
-  border: none;
-}
-
-.pontos:hover {
-  background-color: #218838;
-}
-
-.truco {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-}
-
-.truco:hover {
-  background-color: #0056b3;
 }
 
 .mensagem {
