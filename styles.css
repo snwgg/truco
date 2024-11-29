@@ -77,4 +77,10 @@ body {
 }
 
 .truco {
-  background-color: #FF6600; /* Cor para o botão
+  background-color: #FF6600; /* Cor para o botão TRUCO */
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor
