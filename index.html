@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Truco Big Big</title>
-  <!-- Carregar a fonte personalizada -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -27,12 +26,14 @@
         <h2 id="nomeTime1">Time 1</h2>
         <div id="pontosTime1">0</div>
         <button class="button pontos" onclick="adicionarPonto(1)">+1</button>
+        <button class="button pontos" onclick="subtrairPonto(1)">-1</button>
         <button class="button truco" onclick="adicionarTruco(1)">TRUCO!</button>
       </div>
       <div id="time2Pontos" class="time">
         <h2 id="nomeTime2">Time 2</h2>
         <div id="pontosTime2">0</div>
         <button class="button pontos" onclick="adicionarPonto(2)">+1</button>
+        <button class="button pontos" onclick="subtrairPonto(2)">-1</button>
         <button class="button truco" onclick="adicionarTruco(2)">TRUCO!</button>
       </div>
     </div>
@@ -43,15 +44,4 @@
     <!-- Histórico -->
     <div class="historico">
       <h3>Histórico</h3>
-      <ul id="historicoList"></ul>
-    </div>
-
-  </div>
-
-  <footer>
-    <p>ETERNO TRUCO BIG BIG</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+      <ul id="histor

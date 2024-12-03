@@ -31,6 +31,16 @@ function adicionarPonto(time) {
   verificarVitoria();
 }
 
+function subtrairPonto(time) {
+  if (time === 1 && pontosTime1 > 0) {
+    pontosTime1--;
+    document.getElementById('pontosTime1').textContent = pontosTime1;
+  } else if (time === 2 && pontosTime2 > 0) {
+    pontosTime2--;
+    document.getElementById('pontosTime2').textContent = pontosTime2;
+  }
+}
+
 function adicionarTruco(time) {
   if (time === 1) {
     pontosTime1 += 3;
@@ -44,12 +54,12 @@ function adicionarTruco(time) {
 
 function verificarVitoria() {
   if (pontosTime1 >= 12) {
-    document.getElementById('mensagem').textContent = 'PATOS!';
-    historico.push(${nomeTime1} venceu com ${pontosTime1} pontos);
+    document.getElementById('mensagem').textContent = `${nomeTime1} venceu com ${pontosTime1} pontos!`;
+    historico.push(`${nomeTime1} venceu com ${pontosTime1} pontos`);
     resetarJogo();
   } else if (pontosTime2 >= 12) {
-    document.getElementById('mensagem').textContent = 'PATOS!';
-    historico.push(${nomeTime2} venceu com ${pontosTime2} pontos);
+    document.getElementById('mensagem').textContent = `${nomeTime2} venceu com ${pontosTime2} pontos!`;
+    historico.push(`${nomeTime2} venceu com ${pontosTime2} pontos`);
     resetarJogo();
   }
 }
@@ -60,7 +70,6 @@ function resetarJogo() {
   document.getElementById('pontosTime1').textContent = pontosTime1;
   document.getElementById('pontosTime2').textContent = pontosTime2;
 
-  // Atualiza o histórico
   atualizarHistorico();
 
   setTimeout(() => {
