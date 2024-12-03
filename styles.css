@@ -1,83 +1,89 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Press Start 2P', cursive;
   background-color: #282c34;
-  color: #fff;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .container {
   text-align: center;
+  padding: 20px;
 }
 
 h1 {
-  margin-bottom: 20px;
+  font-size: 2em;
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px #000000;
 }
 
-button {
-  cursor: pointer;
+h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #ff5722;
 }
 
-button:hover {
-  opacity: 0.8;
-}
-
-.config {
-  margin-bottom: 20px;
+label {
+  display: block;
+  margin: 10px 0 5px;
 }
 
 input {
-  padding: 5px;
-  margin: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ffcc00;
   border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.contador {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-.time {
-  text-align: center;
+  background-color: #1f2022;
+  color: #ffffff;
 }
 
 .button {
-  background-color: #61dafb;
-  border: none;
+  background-color: #ff5722;
+  color: #ffffff;
   padding: 10px 20px;
-  margin: 10px 0;
+  margin: 5px;
+  border: none;
   border-radius: 5px;
-  color: #000;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.button:hover {
+  background-color: #e64a19;
+}
+
+.truco {
+  background-color: #ffcc00;
+  color: #000000;
+}
+
+.truco:hover {
+  background-color: #e6b800;
+}
+
+.subtrair {
+  background-color: #d32f2f;
+  color: #ffffff;
+}
+
+.subtrair:hover {
+  background-color: #c62828;
 }
 
 .mensagem {
+  font-size: 1.5em;
   margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.historico {
-  margin-top: 20px;
-}
-
-ul {
-  list-style: none;
+  color: #76ff03;
+  text-shadow: 1px 1px 3px #000000;
 }
 
 footer {
   margin-top: 20px;
-  font-size: 14px;
+  color: #ffcc00;
+  font-size: 0.8em;
 }
